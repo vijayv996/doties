@@ -5,7 +5,7 @@ sudo pacman -Syyu android-tools ark azote base base-devel blueman bluez bluez-ut
 ```
 
 ```
-yay -Syu alpm_octopi_utils azote clipman cloudflare-warp-bin dracula-gtk-theme dracula-icon-git eog-git fastfetch pfetch gopsuinfo gtklock hyprpicker-git hyprshot microsft-edge-stable-bin nwg-look-bin octopi p7zip-gui rar sddm-theme-astronut spotify swayosd-git ttf-apple-emoji ventoy-bin visual-studio-code-bin watershot wlogout wlsunset wofi-emoji waybar-hyprland
+yay -Syu alpm_octopi_utils azote clipman cloudflare-warp-bin dracula-gtk-theme dracula-icon-git eog-git fastfetch pfetch gopsuinfo gtklock hyprpicker-git hyprshot microsft-edge-stable-bin nwg-look-bin octopi p7zip-gui rar sddm-theme-astronut spotify swayosd-git ttf-apple-emoji sublime-text-4 ventoy-bin visual-studio-code-bin watershot wlogout wlsunset wofi-emoji waybar-hyprland
 ```
 
 ## Sample Screenshots:
