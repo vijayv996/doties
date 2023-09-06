@@ -6,14 +6,15 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 34,
-    // "modules-left": ["clock","wlr/workspaces"],
     "modules-left": ["custom/arch","clock","hyprland/window"],
-    "modules-center": ["wlr/workspaces"],
+    "modules-center": ["hyprland/workspaces"],
     "modules-right": ["temperature","custom/power_profile","battery","backlight","pulseaudio","tray","network","bluetooth"],
     "hyprland/window": {
         "format": "{}"
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
         "disable-scroll": true,
         "all-outputs": false,
         "on-click": "activate",
