@@ -8,7 +8,7 @@ yay -Syyu android-tools ark base base-devel blueman bluez bluez-utils brightness
 
 ![Image](screenshots/screenshot1.png)
 ![Image](screenshots/screenshot2.png)
-![Image](screenshots/screenshot3.png)
+<!-- ![Image](screenshots/screenshot3.png) -->
 
 ### Credits:
 <ul>
