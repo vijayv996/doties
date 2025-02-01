@@ -7,15 +7,12 @@
 bindl = ,XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindle=, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindle=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-# bindl = ,XF86AudioMute, exec, swayosd-client --output-volume mute-toggle
-# bindle=, XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise
-# bindle=, XF86AudioLowerVolume, exec, swayosd-client --output-volume lower
 
 # Brightness
+# bindle=, XF86MonBrightnessUp, exec, light -A 3	
+# bindle=, XF86MonBrightnessDown, exec, light -U 3
 bindle=, XF86MonBrightnessUp, exec, brightnessctl set +3%
 bindle=, XF86MonBrightnessDown, exec, brightnessctl set 3%-
-# bindle=, XF86MonBrightnessUp, exec, swayosd-client --brightness +3
-# bindle=, XF86MonBrightnessDown, exec, swayosd-client --brightness -3
 
 ######################################## Keybinds ########################################
 # Apps: just normal apps
@@ -23,23 +20,27 @@ bind = SUPER, C, exec, code --password-store="gnome-libsecret" --enable-features
 bind = SUPER, Return, exec, kitty
 bind = SUPER, T, exec, kitty
 # bind = SUPERSHIFT, E, exec, nautilus --new-window
-bind = SUPERSHIFT, E, exec, dolphin
-bind = SUPER, E, exec, thunar
+bind = SUPERSHIFT, E, exec, thunar
+# bind = SUPER, E, exec, dolphin
+bindx = SUPER, E, exec, thunar
 bind = SUPERSHIFT, W, exec, firefox
 bind = SUPER, W, exec, zen-browser
-bind = SUPER, M, exec, spotify --password-store="gnome-libsecret" --enable-features=UseOzonePlatform --ozone-platform=wayland
+# bind = SUPER, M, exec, spotify --password-store=gnome --enable-features=UseOzonePlatform --ozone-platform=wayland
 bind = SUPER, X, exec, gnome-text-editor --new-window
 
 # Apps: Settings and config
-# bind = SUPER, I, exec, gnome-control-center
+bind = SUPER, I, exec, gnome-control-center
 bind = CONTROLSUPER, V, exec, pavucontrol 
-bind = CONTROLSHIFT, Escape, exec, missioncenter
+bind = CONTROLSHIFT, Escape, exec, gnome-system-monitor
+bind = CONTROLALTSHIFT, Escape, exec, foot -T 'btop' btop
+bind = SUPERSHIFT, I, exec, ~/.local/bin/guifetch
 
 
 # Actions 
 bind = SUPER, A, exec, pkill -USR1 nwg-drawe
 bind = CONTROLALT, Delete, exit
 bind = SUPER, Period, exec, pkill wofi || wofi-emoji
+bind = SUPERSHIFT, Period, exec, pkill fuzzel || ~/.local/bin/fuzzel-emoji
 bind = SUPER, Q, killactive,
 bind = ALT, f4, killactive,
 bind = SUPERALT, Space, togglefloating, 
