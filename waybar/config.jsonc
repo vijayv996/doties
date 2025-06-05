@@ -51,6 +51,7 @@
 
     "custom/arch": {
       "format": "",
+      "on-click": "pkill -USR1 nwg-drawer",
       "tooltip": false
     },
 
