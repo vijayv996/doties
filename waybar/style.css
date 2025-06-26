@@ -1,12 +1,11 @@
 * {
     border: none;
-    padding: 1px;
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 11px;
+    font-size: 14px;
     min-height: 0;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 window#waybar {
@@ -34,13 +33,13 @@ tooltip {
 }
 
 #workspaces button.focused {
-    color: #A0D490;
+    color: #000000;
     background: #eba0ac;
     border-radius: 20px;
 }
 
 #workspaces button.urgent {
-    color: #A0D490;
+    color: #000000;
     background: #a6e3a1;
     border-radius: 20px;
 }
