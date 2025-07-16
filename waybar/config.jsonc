@@ -49,6 +49,13 @@
         //"return-type" : "json"
     //},
 
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+
     "custom/arch": {
       "format": "",
       "on-click": "pkill -USR1 nwg-drawer",

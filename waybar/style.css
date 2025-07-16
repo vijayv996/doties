@@ -61,6 +61,7 @@ tooltip {
 #temperature,
 #workspaces,
 #tray,
+#taskbar,
 #custom-arch,
 #backlight {
     background: #1E1F1D;
@@ -172,4 +173,40 @@ tooltip {
     border-right: 0px;
     transition: 0.3s;
     padding-left: 5px;
+}
+
+#taskbar {
+    background: #1E1F1D;
+    border-radius: 20px;
+    margin-left: 5px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#taskbar button {
+    padding: 5px;
+    color: #313244;
+    margin-right: 5px;
+}
+
+#taskbar button.active {
+    color: #A0D490;
+}
+
+#taskbar button.focused {
+    color: #000000;
+    background: #eba0ac;
+    border-radius: 20px;
+}
+
+#taskbar button.urgent {
+    color: #000000;
+    background: #a6e3a1;
+    border-radius: 20px;
+}
+
+#taskbar button:hover {
+    background: #A0D490;
+    color: #cdd6f4;
+    border-radius: 20px;
 }
