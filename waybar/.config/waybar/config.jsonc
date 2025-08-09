@@ -6,7 +6,7 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 34,
-    "modules-left": ["custom/arch","clock","hyprland/window"],
+    "modules-left": ["custom/arch","clock","wlr/taskbar","hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray","temperature","battery","backlight","pulseaudio","network","bluetooth"],
     "hyprland/window": {
