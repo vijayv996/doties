@@ -9,26 +9,28 @@
     "modules-left": ["custom/arch","clock","wlr/taskbar","hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray","temperature","battery","backlight","pulseaudio","network","bluetooth"],
+    
     "hyprland/window": {
         "format": "{}"
     },
+
     "hyprland/workspaces": {
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": []
-        }
+        // "persistent-workspaces": {
+        //     "1": [],
+        //     "2": [],
+        //     "3": [],
+        //     "4": [],
+        //     "5": [],
+        //     "6": [],
+        //     "7": [],
+        //     "8": [],
+        //     "9": []
+        // }
     },
     
     //"custom/power_profile":{
@@ -149,15 +151,15 @@
         "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "on-click": "foot -T 'nmtui' nmtui",
-        // "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
+        "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠"
-        // "format-alt": "{ifname}:{essid}"
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}:{essid}"
     },
 
     "bluetooth": {
 	    "format": " {status}",
-	    "format-disabled": "", // an empty format will hide the module
+	    "format-disabled": " off", // an empty format will hide the module
 	    "format-connected": " {num_connections}",
         "on-click": "blueman-manager",
 	    "tooltip-format": "{device_alias}",
