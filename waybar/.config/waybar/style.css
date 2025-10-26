@@ -1,14 +1,14 @@
 * {
     border: none;
-    border-radius: 0px;
+    border-radius: 6px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10pt;
     min-height: 0;
     transition: 0.1s;
 }
 
-window#waybar {
+window {
     background: rgba(21, 18, 27, 0);
     color: #cdd6f4;
 }
@@ -22,59 +22,44 @@ tooltip {
     transition: 0.3s;
 }
 
-#workspaces button {
-    padding: 5px;
-    color: #313244;
-    margin-right: 5px;
-}
-
-#workspaces button.active {
-    color: #A0D490;
-}
-
-#workspaces button.focused {
-    color: #000000;
-    background: #eba0ac;
-    border-radius: 20px;
-}
-
-#workspaces button.urgent {
-    color: #000000;
-    background: #a6e3a1;
-    border-radius: 20px;
-}
-
-#workspaces button:hover {
-    background: #A0D490;
-    color: #000000;
-    border-radius: 20px;
-}
-
-#custom-power_profile,
-#custom-weather,
 #window,
 #clock,
 #battery,
-#pulseaudio,
+#wireplumber,
 #network,
 #bluetooth,
 #temperature,
 #workspaces,
+#cpu,
+#memory,
 #tray,
 #taskbar,
 #custom-arch,
 #backlight {
-    background: #1E1F1D;
+    background: #0C1709;
     color: #A0D490;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 0;
-    margin-top: 5px;
-    border: 1px solid #181825;
+    /* for top bar
+    margin-top: 5px; */
+    /* for bottom bar */
+    margin-bottom: 5px;
+    /* border: 1px solid #181825; */
+}
+
+#cpu {
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 2.5px;
+}
+
+#memory {
+    border-radius: 0px;
 }
 
 #temperature {
-    border-radius: 20px 0px 0px 20px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 }
 
 #temperature.critical {
@@ -82,102 +67,61 @@ tooltip {
 }
 
 #backlight {
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 10px 0px 0px 10px;
     padding-left: 7px;
 }
 
 #tray {
-    border-radius: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 4px;
-}
-
-#workspaces {
-    background: #1E1F1D;
-    border-radius: 20px;
-    margin-left: 5px;
-    padding-right: 0px;
-    padding-left: 5px;
-}
-
-#custom-power_profile {
-    color: #a6e3a1;
-    border-left: 0px;
-    border-right: 0px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 }
 
 #window {
-    border-radius: 20px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 #clock {
     color: #A0D490;
-    border-radius: 20px;
-    margin-left: 5px;
+    margin-left: 2.5px;
+    margin-right: 5px;
     border-right: 0px;
     transition: 0.3s;
-    padding-left: 7px;
 }
 
 #network {
     color: #A0D490;
-    border-radius: 20px 0px 0px 20px;
-    margin-left: 5px;
-    border-left: 0px;
-    border-right: 0px;
+    border-radius: 8px 0px 0px 8px;
+    margin-left: 2.5px;
 }
 
 #bluetooth {
     color: #A0D490;
-    border-radius: 0px 20px 20px 0px;
-    margin-right: 8px;
-    /* padding-right: 5px; */
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 } 
 
-#pulseaudio {
+#wireplumber {
     color: #A0D490;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px 20px 20px 0px;
-}
-
-#pulseaudio.microphone {
-    color: #A0D490;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px 20px 20px 0px;
-    margin-right: 5px;
-    padding-right: 8px;
+    border-radius: 0px;
 }
 
 #battery {
     color: #A0D490;
-    border-radius: 0 20px 20px 0;
-    margin-right: 5px;
-    border-left: 0px;
-}
-
-#custom-weather {
-    border-radius: 20px;
-    border-right: 0px;
-    margin-left: 0px;
+    border-radius: 0 8px 8px 0;
+    margin-right: 2.5px;
+    padding-right: 15px;
 }
 
 #custom-arch {
     color: #A0D490;
-    border-radius: 8px;
+    font-size: x-large;
+    padding-right: 18px;
     margin-left: 5px;
-    border-right: 0px;
-    transition: 0.3s;
-    padding-left: 5px;
 }
 
 #taskbar {
     background: #1E1F1D;
-    border-radius: 20px;
     margin-left: 5px;
     padding-right: 0px;
     padding-left: 5px;
@@ -186,7 +130,6 @@ tooltip {
 #taskbar button {
     padding: 5px;
     color: #313244;
-    margin-right: 5px;
 }
 
 #taskbar button.active {
@@ -196,17 +139,46 @@ tooltip {
 #taskbar button.focused {
     color: #000000;
     background: #eba0ac;
-    border-radius: 20px;
 }
 
 #taskbar button.urgent {
     color: #000000;
     background: #a6e3a1;
-    border-radius: 20px;
 }
 
 #taskbar button:hover {
     background: #A0D490;
     color: #cdd6f4;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+}
+
+#workspaces {
+    background: #0C1709;
+    margin-left: 5px;
+}
+
+#workspaces button {
+    color: #81ae73;
+    background-color: #81ae73;
+    font-size: 0.1rem;
     border-radius: 20px;
+    padding: 0px 5px;
+    margin: 5px 1px;
+}
+
+#workspaces button.active {
+    color: #A0D490;
+    background-color: #A0D490;
+    min-width: 40px;
+}
+
+#workspaces button.focused {
+    color: #000000;
+}
+
+#workspaces button:hover {
+    background: #A0D490;
 }
