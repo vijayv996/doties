@@ -43,14 +43,14 @@ context = ctrl+shift+period
 [urgency_low]
 timeout = 4
 background = "#1A1B2699"
-foreground = "#A4D7F1"
-frame_color = "#A4D7F1"
+foreground = "#ffffff"
+frame_color = "#88BC80"
 
 [urgency_normal]
 timeout = 8
 background = "#1A1B2699"
-foreground = "#A4D7F1"
-frame_color = "#A4D7F1"
+foreground = "#ffffff"
+frame_color = "#88BC80"
 
 [urgency_critical]
 timeout = 0
