@@ -6,6 +6,22 @@ window#osd {
     box-shadow: 0 4px 15px rgba(19, 41, 27, 0.40);
 }
 
+window#osd #container {
+    min-width: 10px;
+}
+
+window#osd progressbar {
+    min-width: 10px;
+}
+
+window#osd through {
+    min-width: 10px;
+}
+
+window#osd progress {
+    min-width: 10px;
+}
+
 #icon {
     background: #2b6145;
     color: #88BC80;
