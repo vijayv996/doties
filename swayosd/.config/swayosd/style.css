@@ -1,0 +1,26 @@
+window#osd {
+    background: #132616;
+    /* border-radius: 10px; */
+    border: 2px solid #88BC80;
+    color: #88BC80;
+    box-shadow: 0 4px 15px rgba(19, 41, 27, 0.40);
+}
+
+#icon {
+    background: #2b6145;
+    color: #88BC80;
+}
+
+#circle, #bar {
+    background: #27543b;
+    border-radius: 8px;
+}
+
+#bar {
+    background: #88BC80;
+}
+
+.label {
+    color: #13291b;
+    font-weight: bold;
+}
