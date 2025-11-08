@@ -83,6 +83,15 @@
 	// 	"tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
 	// 	"on-click-right": "kitty --title btop sh -c 'btop'"
 	// },
+
+    // "custom/spotify": {
+    //     "exec": "/usr/bin/python3 /home/wraith/.config/waybar/scripts/mediaplayer.py --player edge",
+    //     "format": "{} ",
+    //     "return-type": "json",
+    //     "on-click": "playerctl play-pause",
+    //     "on-scroll-up": "playerctl next",
+    //     "on-scroll-down": "playerctl previous"
+    // },
     
     "temperature": {
         // "thermal-zone": 1,
@@ -173,14 +182,5 @@
                 "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
             }
         }
-	},
-
-    // "custom/spotify": {
-    //     "exec": "/usr/bin/python3 /home/wraith/.config/waybar/scripts/mediaplayer.py --player edge",
-    //     "format": "{} ",
-    //     "return-type": "json",
-    //     "on-click": "playerctl play-pause",
-    //     "on-scroll-up": "playerctl next",
-    //     "on-scroll-down": "playerctl previous"
-    // }
+	}
 }
