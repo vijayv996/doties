@@ -2,9 +2,7 @@
 
 ## Sample Screenshots:
 
-# ![Image](screenshot1.jpeg)
-
-# ![Image](screenshot2.jpeg)
+# ![Image](screenshot0.png)
 
 ### Credits:
 <ul>
