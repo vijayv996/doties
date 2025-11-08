@@ -170,8 +170,8 @@ window#waybar.empty #window {
 }
 
 #workspaces button.active {
-    color: #A0D490;
-    background-color: #A0D490;
+    color: #0A3E1E;
+    background-color: #0A3E1E;
     min-width: 40px;
 }
 
