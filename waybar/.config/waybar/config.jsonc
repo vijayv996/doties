@@ -4,7 +4,7 @@
     "mod": "dock",
     "exclusive": true,
     "passthrough": false,
-    "modules-left": ["custom/arch","hyprland/workspaces"],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
@@ -173,5 +173,14 @@
                 "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
             }
         }
-	}
+	},
+
+    // "custom/spotify": {
+    //     "exec": "/usr/bin/python3 /home/wraith/.config/waybar/scripts/mediaplayer.py --player edge",
+    //     "format": "{} ",
+    //     "return-type": "json",
+    //     "on-click": "playerctl play-pause",
+    //     "on-scroll-up": "playerctl next",
+    //     "on-scroll-down": "playerctl previous"
+    // }
 }
