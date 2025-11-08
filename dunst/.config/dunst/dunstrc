@@ -1,59 +1,137 @@
 [global]
-monitor = 0
-follow = mouse
-geometry = "280x50-20+90"
-indicate_hidden = no
-shrink = no
-separator_height = 4
-separator_color = yes
-padding = 20
-horizontal_padding = 20
-frame_width = 3
-sort = no
-idle_threshold = 120
-font = Torus 13
-line_height = 4
-markup = full
-format = "<b>%s</b>\n%b"
-alignment = left
-show_age_threshold = 60
-word_wrap = yes
-ignore_newline = no
-stack_duplicates = false
-hide_duplicate_count = yes
-show_indicators = no
-icon_position = left
-max_icon_size = 48
-sticky_history = yes
-history_length = 20
-browser = x-www-browser -new-tab
-always_run_script = true
-title = Dunst
-class = Dunst
-corner_radius = 10
-origin = top-right
-offset = 8x69
+    ### Display ###
+    monitor = 0                             # display on monitor
+    follow = mouse                          # display on cursor's monitor
 
-[shortcuts]
-close = ctrl+shift+space
-close_all = ctrl+shift+space
-history = ctrl+grave
-context = ctrl+shift+period
+    ### Geometry ###
+    width = 300                             # use width = (0, 300) for dynamic width
+    height = (0, 300)                       # dynamic height from 0 - 300
+    origin = bottom-right                   # position
+    offset = (10, 10)                       # margin from screen
+    scale = 0                               # Scale factor. It is auto-detected if value is 0.
+
+    notification_limit = 20                 # notification limit. 0 is unlimited
+
+    ### Progress bar ###
+    progress_bar = true
+    progress_bar_height = 10                # make it twice as big as frame width
+    progress_bar_frame_width = 1            # frame width
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 4          # corner radius of bar
+    progress_bar_corners = all              # which corners should be rounded
+    icon_corner_radius = 0                  # ronded corners for images
+    icon_corners = all                      # which corners should rounded of icon
+    indicate_hidden = no
+    separator_height = 4                    # gap between two notifications
+    padding = 8                             # Padding between text and separator
+    horizontal_padding = 20
+    text_icon_padding = 0                   # gap between text and icon
+    frame_width = 3                         # frame/border width
+    frame_color = "#88BC80"               # frame/border color
+    sort = update                           # sort type, value: id, urgency_ascending, urgency_descending, update (recent)
+    gap_size = 0
+    separator_color = auto
+
+    ### Text ###
+
+    font = Noto Sans 11
+    line_height = 0
+    markup = full
+
+    # The format of the message.  Possible variables are:
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %c  category
+    #   %S  stack_tag
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    #   %p  progress value if set ([  0%] to [100%]) or nothing
+    #   %n  progress value if set without any extra characters
+    #   %%  literal %
+    # Markup is allowed
+    format = "<b>%s</b>\n%b"
+    alignment = left                        # alignment. left, center, right avaliable
+    vertical_alignment = center             # vertical alignment. top, center, bottom
+    show_age_threshold = 60                 # show age of notification after n seconds. -1 to disable
+    ignore_newline = no                     # ignore '\n'
+    stack_duplicates = true                 # stack notifs of same content
+    hide_duplicate_count = false            # count of stacked notifs
+    show_indicators = yes                   # Display indicators for URLs (U) and actions (A).
+
+    # Specify where to make an ellipsis in long lines.
+    # Possible values are "start", "middle" and "end".
+    ellipsize = middle
+
+    ### Icons ###
+
+    # Recursive icon lookup. You can set a single theme, instead of having to
+    # define all lookup paths.
+    enable_recursive_icon_lookup = true
+    icon_theme = Adwaita
+    icon_position = left                    # Align icons left/right/top/off
+    min_icon_size = 32
+    max_icon_size = 128
+
+    # Paths to default icons (only necessary when not using recursive icon lookup)
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+    ### History ###
+
+    # Should a notification popped up from history be sticky or timeout
+    # as if it would normally do.
+    sticky_history = yes
+    history_length = 20
+
+    ### Misc/Advanced ###
+    browser = /usr/bin/xdg-open             # browser to open urls
+    always_run_script = true
+    title = Dunst                           # Define the title of the windows spawned by dunst (X11 only)
+    class = Dunst                           # Define the class of the windows spawned by dunst (X11 only)
+    corner_radius = 10                      # rounded corners
+    corners = all                           # corners to round The accepted corner values are bottom-right, bottom-left, top-right, top-left, top, bottom, left, right or all.
+    ignore_dbusclose = false
+
+    ### Wayland ###
+    force_xwayland = false
+    force_xinerama = false
+
+    ### mouse
+
+    # * none: Don't do anything.
+    # * do_action: Invoke the action determined by the action_name rule. If there is no
+    #              such action, open the context menu.
+    # * open_url: If the notification has exactly one url, open it. If there are multiple
+    #             ones, open the context menu.
+    # * close_current: Close current notification.
+    # * remove_current: Remove current notification from history.
+    # * close_all: Close all notifications.
+    # * context: Open context menu for the notification.
+    # * context_all: Open context menu for all notifications.
+    # These values can be strung together for each mouse event, and
+    # will be executed in sequence.
+    mouse_left_click = do_action, open_url, close_current
+    mouse_middle_click = close_current
+    mouse_right_click = context
 
 [urgency_low]
-timeout = 4
-background = "#1A1B2699"
-foreground = "#ffffff"
-frame_color = "#88BC80"
+    background = "#1A1B2699"
+    foreground = "#888888"
+    timeout = 10
+    default_icon = dialog-information
 
 [urgency_normal]
-timeout = 8
-background = "#1A1B2699"
-foreground = "#ffffff"
-frame_color = "#88BC80"
+    background = "#1A1B2699"
+    foreground = "#ffffff"
+    timeout = 10
+    override_pause_level = 30
+    default_icon = dialog-information
 
 [urgency_critical]
-timeout = 0
-background = "#1A1B2699"
-foreground = "#FDDC74"
-frame_color = "#FDDC74"
+    background = "#1A1B2699"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 0
+    override_pause_level = 60
+    default_icon = dialog-warning
