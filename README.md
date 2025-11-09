@@ -4,6 +4,10 @@
 
 # ![Image](screenshot0.png)
 
+### Packages for personal use
+
+```7zip albert archlinux-xdg-menu base base-devel batsignal blueman bluez bluez-utils breeze breeze5 brightnessctl cliphist cloudflare-warp-bin cmake cpio cursor-bin dunst efibootmgr ethtool fuzzel fzf git gnome-keyring grim gst-plugin-pipewire helvum hypridle hyprland hyprlock hyprpaper hyprpicker hyprpolkitagent hyprshot hyprsunset imagemagick intel-media-driver intel-media-sdk intel-ucode intel-undervolt iwd jamesdsp jdk21-openjdk kiro-bin kitty kvantum kvantum-qt5 less libpulse libva-intel-driver linux-firmware linux-zen linux-zen-headers localsend-bin loupe man-db mesa-utils meson microsoft-edge-stable-bin mission-center mousepad mpv nano ncdu neovim net-tools network-manager-applet networkmanager nmap noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nwg-drawer nwg-look obs-studio pavucontrol pfetch pipewire pipewire-alsa pipewire-jack pipewire-pulse pnpm polkit-kde-agent poppler ps_mem qt5-wayland qt5ct qt6-virtualkeyboard qt6-wayland qt6ct resvg sddm selectdefaultapplication-fork-git slurp smartmontools socat solanum stow stress sublime-text-4 swayosd telegram-desktop thermald tldr tlp ttf-apple-emoji ttf-cascadia-code ttf-dejavu ttf-hack ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-roboto udiskie unzip uv uwsm visual-studio-code-bin vulkan-intel waybar wget windsurf wireless_tools wireplumber wl-screenrec wlogout woff2-font-awesome wofi wofi-emoji xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-utils xorg-server xorg-xinit yaak-bin yay-bin yay-bin-debug yazi yt-dlp zed zen-browser-bin zip zram-generator```
+
 ### Credits:
 <ul>
     <li>@end-4 for the base hyprland config</li>
