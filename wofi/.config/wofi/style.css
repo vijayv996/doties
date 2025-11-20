@@ -1,0 +1,81 @@
+/* Color Palette based on the screenshot:
+   --bg-dark: The deep jade/teal background (e.g., #1A3E39)
+   --bg-medium: The folder list background/selection hover (e.g., #2C574F)
+   --fg-bright: The active text/border/highlight (e.g., #99D4B5)
+   --fg-normal: The normal text color (e.g., #7AB593)
+*/
+
+/* General Window Style */
+window {
+    /* Set the window background to the deep jade color */
+    background-color: #104424;
+    /* Ensure no rounded corners */
+    border-radius: 10px;
+    /* Apply a thin border in the bright highlight color */
+    border: 1px solid #709E69;
+    padding: 10px;
+}
+
+/* Input Bar (where you type) */
+input {
+    /* Match the window background */
+    background-color: #1A3E39;
+    /* Use the bright jade for text */
+    color: #99D4B5;
+    font-size: 1em;
+    font-family: monospace; /* Adjust to your specific terminal font */
+    border: 0px; /* No border on the input field itself */
+    padding: 5px;
+    margin-bottom: 5px; /* Spacing between input and list */
+}
+
+/* Scrollbar (optional, Wofi might not always show it) */
+* {
+    /* Set the normal text color */
+    color: #7AB593;
+}
+
+/* Unselected Row in the list */
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* List/Box containing the entries */
+#inner-box {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+/* Entry (Each Emoji/Result) */
+#entry {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px;
+}
+
+/* Selected Entry (Hover/Active) */
+#entry:selected {
+    /* Use the medium jade color for the selection background */
+    background-color: #2C574F;
+    border-radius: 10px;
+    /* Use the bright jade for the selection text */
+    color: #99D4B5;
+}
+
+/* Text in the entries */
+#text {
+    /* Use a standard monospace font */
+    font-family: monospace;
+    font-size: 1.1em;
+    /* Use the normal jade text color for unselected items */
+    color: #7AB593;
+}
+
+/* Text in the selected entry */
+#text:selected {
+    /* Use the bright jade text color for selected items */
+    color: #99D4B5;
+}
