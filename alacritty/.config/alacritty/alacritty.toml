@@ -1,0 +1,31 @@
+# Alacritty configuration
+
+[window]
+opacity = 0.6
+
+[font]
+normal = { family = "JetBrains Mono", style = "Regular" }
+bold = { family = "JetBrains Mono", style = "Bold" }
+italic = { family = "JetBrains Mono", style = "Italic" }
+bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
+size = 12
+
+[colors.primary]
+foreground = "0x88B97D"
+# You mentioned to make the color schemes same as other terminals.
+# This often implies using a pre-defined theme. However, I can't
+# automatically detect or apply themes from other terminals.
+# For now, I've set the foreground color as requested.
+# You might want to uncomment and configure a full color scheme here if needed.
+# For example:
+# background = "0x1E1E2E" # Example dark background
+#
+# [colors.normal]
+# black = "0x444444"
+# red = "0xCC6666"
+# green = "0xB5BD68"
+# yellow = "0xF0C674"
+# blue = "0x81A2BE"
+# magenta = "0xB294BB"
+# cyan = "0x8ABEB7"
+# white = "0xC5C8C6"
