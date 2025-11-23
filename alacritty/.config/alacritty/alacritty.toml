@@ -10,22 +10,36 @@ italic = { family = "JetBrains Mono", style = "Italic" }
 bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
 size = 12
 
+[scrolling]
+multiplier  = 10
+
+[colors]
+# Default colors
 [colors.primary]
-foreground = "0x88B97D"
-# You mentioned to make the color schemes same as other terminals.
-# This often implies using a pre-defined theme. However, I can't
-# automatically detect or apply themes from other terminals.
-# For now, I've set the foreground color as requested.
-# You might want to uncomment and configure a full color scheme here if needed.
-# For example:
-# background = "0x1E1E2E" # Example dark background
-#
-# [colors.normal]
-# black = "0x444444"
-# red = "0xCC6666"
-# green = "0xB5BD68"
-# yellow = "0xF0C674"
-# blue = "0x81A2BE"
-# magenta = "0xB294BB"
-# cyan = "0x8ABEB7"
-# white = "0xC5C8C6"
+background = '0x000000' # Black
+foreground = '0x88B97D' # White
+
+# Normal colors (The standard 8 colors, often referred to as 'ANSI' colors)
+[colors.normal]
+black   = '0x000000'
+red     = '0xCD0000'
+green   = '0x00CD00'
+yellow  = '0xCDCD00'
+blue    = '0x0000EE'
+magenta = '0xCD00CD'
+cyan    = '0x00CDCD'
+white   = '0xE5E5E5'
+
+# Bright colors (The bright 8 colors)
+[colors.bright]
+black   = '0x7F7F7F'
+red     = '0xFF0000'
+green   = '0x00FF00'
+yellow  = '0xFFFF00'
+blue    = '0x5C5CFF' # A common bright blue in XTerm
+magenta = '0xFF00FF'
+cyan    = '0x00FFFF'
+white   = '0xFFFFFF'
+
+[env]
+TERM = "xterm-256color"
