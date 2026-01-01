@@ -1,7 +1,7 @@
 {
     "layer": "bottom",
     "position": "bottom",
-    "mod": "dock",
+    "mode": "dock",
     "exclusive": true,
     "passthrough": false,
     "modules-left": ["custom/arch", "hyprland/workspaces"],
@@ -110,6 +110,7 @@
         "format-linked": "{ifname} (No IP) ",
         // "on-click": "kitty nmtui",
         "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
+        "on-click-right": "nm-connection-editor",
         "format-icons": [
 			"󰤯",
 			"󰤟",
